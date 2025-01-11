@@ -293,7 +293,7 @@ def compute_weighted_similarity(
 
                 pbar.update(1)
 
-    similarity_df = pd.DataFrame(similarity_matrix, index=df.index, columns=df.index)
+    similarity_df = pd.DataFrame(similarity_matrix, index=df["Player"], columns=df["Player"])
     return similarity_df
 
 def get_max_similarity(similarity_df):
